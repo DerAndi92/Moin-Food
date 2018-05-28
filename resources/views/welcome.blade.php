@@ -72,8 +72,16 @@
 
             <div class="content">
                 <div class="logo">
-                    <img src="images/logo.png" alt ="Logo">
+                    <img src="{{asset('images/logo.png')}}" alt ="Logo">
                 </div>
+                @foreach($lokale as $lokal)
+                    <article>
+                        <h2>{{$lokal->name}}</h2>
+                        {{$lokal->text}}
+                    </article>
+                @endforeach
+
+
 
             </div>
         </div>
