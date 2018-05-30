@@ -3,87 +3,54 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <title>Laravel</title>
+        <title>Moin-Food Hamburg</title>
 
-        <!-- Fonts -->
+        <!-- Fonts & CSS -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type= "text/css" href="css/app.css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-        </style>
     </head>
+
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="logo">
+    <!-- Header -->
+        <header>
+            <div id="logo">
+                <a href="#">
                     <img src="{{asset('images/logo.png')}}" alt ="Logo">
-                </div>
-                @foreach($lokale as $lokal)
-                    <article>
-                        <h2>{{$lokal->name}}</h2>
-                        {{$lokal->text}}
-                    </article>
-                @endforeach
-
-
-
+                </a>
             </div>
-        </div>
+
+            <div id="navi">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#work">Vorschlag</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Image-Header -->
+
+    <section id="image"></section>
+
+    <!-- Search -->
+    <form>
+        <section id="search">
+         <h1>Essen. Trinken. Wo du willst.</h1>
+         <hr><textarea class="input_text" tabindex="1" placeholder="Gib deinen Standort ein"></textarea><br>
+        </section>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2018 Moin-Food <a href="impressum.blade.php">Impressum</a>
+        <a href="datenschutz.blade.php">Datenschutz</a>
+
+    </footer>
+
     </body>
 </html>
