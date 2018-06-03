@@ -25,11 +25,6 @@ header {
 #logo img {
     width: 100%;
 }
-section {
-    padding-top: 20px;
-    padding-bottom: 200px;
-    min-height: 80%;
-}
 
 header nav {
     float: right;
@@ -54,6 +49,38 @@ header nav ul li a:hover {
     color: #4f7383;
 }
 
+main {
+    height: 100%;
+}
+
+#maincontent {
+    position: relative;
+    min-height: 300px;
+}
+
+#search {
+    position: absolute;
+    width: 80%;
+    top: -80px;
+    background-color: #4f7383;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 12px;
+}
+
+.search-options select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 h1 {
     font-family: 'Raleway100', sans-serif;
     text-transform: uppercase;
@@ -61,10 +88,11 @@ h1 {
 }
 
 #image {
-    background: url("home_full.jpg");
-    background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    background: url("../images/home_full.jpg") fixed center center;
+    max-height: 70vh;
+    height: 100%;
+    width: 100%;
 }
 
 /* ---- Form ---- */

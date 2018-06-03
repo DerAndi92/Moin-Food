@@ -13,6 +13,6 @@ class HomeController extends Controller
         $lokale = Lokal::where('name', 'Miss Yang')->get();
 
 
-        return view('welcome', ['lokale' => $lokale]);
+        return view('index', ['lokale' => $lokale]);
     }
 }

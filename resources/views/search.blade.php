@@ -1,0 +1,24 @@
+<!-- Search -->
+<div id="search">
+<form>
+        <h1>Essen. Trinken. Wo du willst.</h1>
+        <input id="search-input" type="text" class="input_text" tabindex="1" placeholder="Gib deinen Standort ein" />
+        <div class="search-options">
+            <select name="typ">
+                <option value="0">Typ</option>
+            </select>
+            <select name="anlass">
+                <option value="0">Anlass</option>
+            </select>
+            <select name="preiskategorie">
+                <option value="0">Preiskategorie</option>
+            </select>
+            <select name="art">
+                <option value="0">Art</option>
+            </select>
+            <select name="altersspanne">
+                <option value="0">Altersspanne</option>
+            </select>
+        </div>
+</form>
+</div>
