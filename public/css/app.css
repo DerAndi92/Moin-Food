@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     text-align: center;
+
 }
 
 header {
@@ -67,12 +68,16 @@ main {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 6px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 #search-input {
-    width: 100%;
+    /*width: 100%;*/
     padding: 4px;
     margin-bottom: 12px;
+    order: 1;
 }
 
 .search-options select {
@@ -81,18 +86,71 @@ main {
     appearance: none;
 }
 
+/* ------- BUTTON ---------*/
+
+.start-suche {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eb5a25), color-stop(1, #c74f24));
+    background:-moz-linear-gradient(top, #eb5a25 5%, #c74f24 100%);
+    background:-webkit-linear-gradient(top, #eb5a25 5%, #c74f24 100%);
+    background:-o-linear-gradient(top, #eb5a25 5%, #c74f24 100%);
+    background:-ms-linear-gradient(top, #eb5a25 5%, #c74f24 100%);
+    background:linear-gradient(to bottom, #eb5a25 5%, #c74f24 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb5a25', endColorstr='#c74f24',GradientType=0);
+    background-color:#eb5a25;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #942911;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:7px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #854629;
+    order: 2;
+}
+
+.start-suche:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c74f24), color-stop(1, #eb5a25));
+    background:-moz-linear-gradient(top, #c74f24 5%, #eb5a25 100%);
+    background:-webkit-linear-gradient(top, #c74f24 5%, #eb5a25 100%);
+    background:-o-linear-gradient(top, #c74f24 5%, #eb5a25 100%);
+    background:-ms-linear-gradient(top, #c74f24 5%, #eb5a25 100%);
+    background:linear-gradient(to bottom, #c74f24 5%, #eb5a25 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c74f24', endColorstr='#eb5a25',GradientType=0);
+    background-color:#c74f24;
+}
+.start-suche:active {
+    position:relative;
+    top:1px;
+}
+#form {
+
+}
+
 h1 {
-    font-family: 'Raleway100', sans-serif;
+    font-family: 'Raleway600', sans-serif;
     text-transform: uppercase;
     color: #80b3ac;
 }
 
+h2 {
+    font-family: 'Raleway200', sans-serif;
+    font-size: 30px;
+    color: #eb5a25;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 20px;
+}
+
 #image {
     background-size: cover;
-    background: url("../images/home_full.jpg") fixed center center;
+    background: url("../images/home_full.jpg") no-repeat fixed center center;
     max-height: 70vh;
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 
 /* ---- Form ---- */
@@ -110,4 +168,51 @@ form textarea {
 
 .input_text {
     padding-left: 10px;
+    margin: 10px;
+    min-width: 400px;
+    min-height: 20px;
+}
+
+/* --- PROPOSALS --- */
+
+.proposals_list {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    max-width: 1425px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restaurants-container {
+    padding-top: 150px;
+}
+
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+}
+
+.topic-list li {
+    display: list-item;
+    min-width: auto;
+    padding: 10px;
+    margin: 0 5px 20px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    font-family: 'Raleway100', sans-serif;
+}
+
+footer a {
+    font-family: 'Raleway100', sans-serif;
+    font-size: 16px;
+    color: #4f7383;
+    text-decoration: none
 }

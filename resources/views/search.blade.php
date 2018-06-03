@@ -3,6 +3,7 @@
 <form>
         <h1>Essen. Trinken. Wo du willst.</h1>
         <input id="search-input" type="text" class="input_text" tabindex="1" placeholder="Gib deinen Standort ein" />
+        <button type="button" class="start-suche">Los geht's!</button>
         <div class="search-options">
             <select name="typ">
                 <option value="0">Typ</option>

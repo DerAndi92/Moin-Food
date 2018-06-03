@@ -11,7 +11,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Über uns</a></li>
-                <li><a href="#work">Vorschlag</a></li>
+                <li><a href="#proposal">Vorschlag</a></li>
             </ul>
         </nav>
     </div>
