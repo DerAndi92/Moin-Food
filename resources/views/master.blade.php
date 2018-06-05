@@ -18,8 +18,10 @@
 
     <main role="main">
         @yield('main')
+
+        @include('footer')
     </main>
 
-    @include('footer')
+
     </body>
 </html>

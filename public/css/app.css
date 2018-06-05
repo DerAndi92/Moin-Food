@@ -2,7 +2,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    text-align: center;
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 
 }
 
@@ -51,12 +56,15 @@ header nav ul li a:hover {
 }
 
 main {
-    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #maincontent {
     position: relative;
-    min-height: 300px;
+    flex-grow: 1;
+    height: 100%;
 }
 
 #search {
@@ -137,7 +145,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Raleway200', sans-serif;
+
     font-size: 30px;
     color: #eb5a25;
     white-space: nowrap;
@@ -146,16 +154,19 @@ h2 {
 }
 
 #image {
-    background-size: cover;
-    background: url("../images/home_full.jpg") no-repeat fixed center center;
-    max-height: 70vh;
+
+    background: url("../images/home_full.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+    min-height: 70vh;
     height: 100%;
     width: auto;
 }
 
 /* ---- Form ---- */
 form textarea {
-    font-family: 'Raleway600', sans-serif;
     font-size: 15px;
     margin-bottom: 10px;
     border-radius: 2px;
@@ -205,13 +216,11 @@ form textarea {
 }
 
 footer {
-    position: fixed;
-    width: 100%;
+    text-align: center;
     font-family: 'Raleway100', sans-serif;
 }
 
 footer a {
-    font-family: 'Raleway100', sans-serif;
     font-size: 16px;
     color: #4f7383;
     text-decoration: none
