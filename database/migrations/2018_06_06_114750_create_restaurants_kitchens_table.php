@@ -33,7 +33,7 @@ class CreateRestaurantsKitchensTable extends Migration
      */
     public function down()
     {
-        Schema::table('restaurants_properties', function(Blueprint$table) {
+        Schema::table('restaurants_kitchens', function(Blueprint$table) {
             $table->dropForeign(['restaurant_id']);
             $table->dropForeign(['kitchen_id']);
         });
