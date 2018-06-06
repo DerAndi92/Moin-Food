@@ -1,12 +1,10 @@
-@extends('master')
+@extends('template.master')
 
 @section('main')
 
-    <section id="image"></section>
-    <section id="maincontent">
-        @include('search')
-        @include('proposals')
-        @include('ueberUns')
-    </section>
+    <section id="hero-image"> </section>
+    @include('elements.search')
+    @include('elements.suggestions')
+    @include('elements.about')
 
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrtTable extends Migration
+class CreateImageTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateOrtTable extends Migration
      */
     public function up()
     {
-        Schema::create('ort', function (Blueprint $table) {
+        Schema::create('image_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',50);
-            $table->integer('plz')->unsigned();
+            $table->string('name', 30);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateOrtTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ort');
+        Schema::dropIfExists('image_types');
     }
 }

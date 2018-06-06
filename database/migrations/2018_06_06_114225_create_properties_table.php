@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLokaltypTable extends Migration
+class CreatePropertiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateLokaltypTable extends Migration
      */
     public function up()
     {
-        Schema::create('lokaltyp', function (Blueprint $table) {
+        Schema::create('properties', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',100);
+            $table->string('name', 50);
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateLokaltypTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lokaltyp');
+        Schema::dropIfExists('properties');
     }
 }
