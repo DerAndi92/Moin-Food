@@ -6,6 +6,7 @@
     <section id="maincontent">
         @include('search')
         @include('proposals')
+        @include('ueberUns')
     </section>
 
 @endsection

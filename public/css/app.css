@@ -11,6 +11,23 @@ body {
 
 }
 
+h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #80b3ac;
+    text-align: center;
+}
+
+h2 {
+
+    font-size: 30px;
+    color: #eb5a25;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* ----- HEADER ------- */
+
 header {
     width: 100%;
     height: 65px;
@@ -31,6 +48,8 @@ header {
 #logo img {
     width: 100%;
 }
+
+/* ----- NAVI ------- */
 
 header nav {
     float: right;
@@ -67,15 +86,22 @@ main {
     height: 100%;
 }
 
+/* ----- SUCHE ------- */
+
+
+.icon-search {
+    position: absolute;
+}
+
 #search {
     position: absolute;
-    width: 80%;
+    width: 70%;
     top: -80px;
     background-color: #4f7383;
     padding: 10px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 6px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     flex-flow: row wrap;
@@ -84,12 +110,13 @@ main {
 
 #search-input {
     padding: 4px;
-    margin-bottom: 12px;
-    order: 1;
+    margin-bottom: 14px;
+    margin-right: 10px;
+    border-radius: 4px;
 }
 
 .search-options {
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 14px;
     font-weight: 200;
     position: relative;
@@ -103,7 +130,8 @@ main {
     flex-wrap: nowrap;
     background-color: #f9f9f9;
     width: auto;
-    padding: 8px 15px;
+    padding: 5px 15px;
+    margin-bottom: 12px;
     z-index: 1;
     cursor: pointer;
 }
@@ -119,6 +147,12 @@ main {
     color: #4f7383;
 }
 
+.advanced-options {
+    font-weight: 200;
+    color: white;
+    text-align: right;
+}
+
 /* ------- BUTTON ---------*/
 
 .start-suche {
@@ -130,19 +164,18 @@ main {
     background:linear-gradient(to bottom, #eb5a25 5%, #c74f24 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb5a25', endColorstr='#c74f24',GradientType=0);
     background-color:#eb5a25;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
     border:1px solid #942911;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-family:Arial;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     font-size:13px;
-    padding:7px 10px;
+    padding:8px 10px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #854629;
-    order: 2;
 }
 
 .start-suche:hover {
@@ -163,21 +196,6 @@ main {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-h1 {
-    font-family: 'Raleway600', sans-serif;
-    text-transform: uppercase;
-    color: #80b3ac;
-}
-
-h2 {
-
-    font-size: 30px;
-    color: #eb5a25;
-    white-space: nowrap;
-    text-align: left;
-    padding-left: 20px;
 }
 
 #image {
@@ -206,12 +224,16 @@ form textarea {
 
 .input_text {
     padding-left: 10px;
-    margin: 10px;
     min-width: 400px;
     min-height: 20px;
 }
 
 /* --- PROPOSALS --- */
+
+
+#restaurants-container {
+    padding: 150px 0 100px 0;
+}
 
 .proposals_list {
     display: flex;
@@ -223,14 +245,9 @@ form textarea {
     margin-right: auto;
 }
 
-#restaurants-container {
-    padding-top: 150px;
-}
-
-
 .topic-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
     padding: 0px;
 }
@@ -242,12 +259,58 @@ form textarea {
     margin: 0 5px 20px;
 }
 
+
+.ribbon {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 0;
+    border: 25px solid #eb5a25;
+    border-top: 0 solid;
+    border-bottom: 35px solid rgba(0,0,0,0);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgba(255,255,255);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    -webkit-transform: rotateZ(-90deg)   ;
+    transform: rotateZ(-90deg)  ;
+}
+
+/* --- UEBER UNS --- */
+
+#about-text {
+    background: rgba(18,150,130,0.2);
+    padding: 50px 0 50px 0;
+    display: block;
+}
+
+#about-text h1 {
+    color: #4f7383;
+}
+
+.about-section {
+    display: flex;
+    font-weight: 400;
+    color: #000000;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- FOOTER --- */
+
 footer {
+    padding: 50px 0 20px 0;
     text-align: center;
-    font-family: 'Raleway100', sans-serif;
+    font-weight: 200;
 }
 
 footer a {
+    flex-wrap: wrap;
     font-size: 16px;
     color: #4f7383;
     text-decoration: none

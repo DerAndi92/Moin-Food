@@ -10,7 +10,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über uns</a></li>
+                <li><a href="#about-text">Über uns</a></li>
                 <li><a href="#proposal">Vorschlag</a></li>
             </ul>
         </nav>
