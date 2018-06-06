@@ -34,7 +34,8 @@ class CreateRestaurantsPropertiesTable extends Migration
     public function down()
     {
         Schema::table('restaurants_properties', function(Blueprint$table) {
-            $table->dropForeign(['restaurant_id', 'property_id']);
+            $table->dropForeign(['restaurant_id']);
+            $table->dropForeign(['property_id']);
         });
         Schema::dropIfExists('restaurants_properties');
     }
