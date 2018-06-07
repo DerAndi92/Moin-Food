@@ -12,7 +12,7 @@ class PropertiesTableSeeder extends Seeder
      */
     public function run()
     {
-        $values= ['Vegan', 'Vegetarisch', 'Raucherfrei', 'Barrierefrei', 'für Gruppen', 'Gesund'];
+        $values= ['Vegan', 'Vegetarisch', 'Raucherfrei', 'Barrierefrei', 'für Gruppen', 'Gesund', 'Fast Food'];
 
         foreach($values as $value) {
             DB::table('properties')->insert([

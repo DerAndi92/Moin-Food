@@ -6,7 +6,7 @@
             <li class="restaurant-card">
                 <a href="/" class="wrapper">
                     <img src="{{asset('images/content/suggestions/kafffe_kuchen.jpg')}}" />
-                    <h4>Kaffe & Kuchen</h4>
+                    <h4>Kaffee & Kuchen</h4>
                 </a>
             </li>
             <li class="restaurant-card">
@@ -36,7 +36,7 @@
             <li class="restaurant-card">
                 <a href="/" class="wrapper">
                     <img src="{{asset('images/content/suggestions/jahrestag.jpg')}}" />
-                    <h4>Euer Jahrestag</h4>
+                    <h4>Jahrestag</h4>
                 </a>
             </li>
             <li class="restaurant-card">
