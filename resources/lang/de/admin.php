@@ -66,6 +66,18 @@ return [
                 "edit" => 'Landesküche bearbeiten',
             ],
         ],
+        'events' => [
+            'titles' => [
+                "index" => 'Anlässe',
+                "create" => 'Anlass hinzufügen',
+                "edit" => 'Anlass bearbeiten',
+            ],
+            'breadcrumbs' => [
+                "index" => 'Anlässe',
+                "create" => 'Anlass hinzufügen',
+                "edit" => 'Anlass bearbeiten',
+            ],
+        ],
         'restaurant_types' => [
             'titles' => [
                 "index" => 'Ambiente',

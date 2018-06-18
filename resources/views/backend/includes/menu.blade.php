@@ -1,5 +1,5 @@
 <a id="logo" href="{{route('home')}}" title="">
-    <img alt="Pixories Logo" src="{{ URL::asset('assets/images/backend/Logo.svg') }}">
+    <img alt="Pixories Logo" src="{{ URL::asset('images/template/logo-admin.png') }}">
 </a>
 <div id="nav-toggle">
     <a href="#">
@@ -22,6 +22,9 @@
         </li>
         <li class="{{\MoinFood\Helper\BladeHelper::activeRouteSegment(2,'kitchens') ? 'active' : ''}}">
             <a href="{{route('admin.kitchens.index')}}">@lang('admin.pages.kitchens.titles.index')</a>
+        </li>
+        <li class="{{\MoinFood\Helper\BladeHelper::activeRouteSegment(2,'events') ? 'active' : ''}}">
+            <a href="{{route('admin.events.index')}}">@lang('admin.pages.events.titles.index')</a>
         </li>
     </ul>
 </nav>

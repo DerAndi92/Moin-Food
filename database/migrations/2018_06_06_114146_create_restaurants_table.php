@@ -18,17 +18,13 @@ class CreateRestaurantsTable extends Migration
             $table->integer('restaurant_type_id')->unsigned()->nullable();
             $table->integer('place_id')->unsigned()->nullable();
             $table->string('name',100);
-            $table->string('slug',200);
             $table->string('description',500)->nullable();
-            $table->string('text')->nullable();
-            $table->boolean('highlight');
-            $table->smallInteger('price_category')->unsigned();
+            $table->boolean('highlight')->default(0);
+            $table->smallInteger('price_category')->unsigned()->nullable();
             $table->smallInteger('rating_ambiance')->unsigned()->nullable();
             $table->smallInteger('rating_taste')->unsigned()->nullable();
             $table->smallInteger('rating_service')->unsigned()->nullable();
             $table->string('street',100)->nullable();
-            $table->float('latitude')->nullable();
-            $table->float('longitude')->nullable();
             $table->timestamps();
 
             $table->foreign('place_id')->references('id')->on('places')->onDelete('set null');

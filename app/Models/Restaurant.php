@@ -33,4 +33,24 @@ class Restaurant extends Model
     public function kitchens() {
         return $this->belongsToMany(Kitchen::class, 'restaurants_kitchens');
     }
+
+    public function events() {
+        return $this->belongsToMany(Event::class, 'restaurants_events');
+    }
+
+    public function hasKitchen($kitchen) {
+        return(in_array($kitchen->id, $this->kitchens()->pluck('id')->all()));
+    }
+
+    public function hasEvent($event) {
+        return(in_array($event->id, $this->events()->pluck('id')->all()));
+    }
+
+    public function hasProperty($property) {
+        return(in_array($property->id, $this->properties()->pluck('id')->all()));
+    }
+
+    public function hasImage() {
+        return $this->images()->count() > 0;
+    }
 }

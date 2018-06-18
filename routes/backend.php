@@ -24,6 +24,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'as' => 'admin.'], 
         Route::get('delete/{id}/', 'KitchensController@destroy')->name('destroy');
     });
 
+    // Events
+    Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
+        Route::get('/', 'EventsController@index')->name('index');
+        Route::get('/create/', 'EventsController@create')->name('create');
+        Route::post('/create/', 'EventsController@store')->name('store');
+        Route::get('/{id}/', 'EventsController@edit')->name('edit');
+        Route::post('/{id}/', 'EventsController@update')->name('update');
+        Route::get('delete/{id}/', 'EventsController@destroy')->name('destroy');
+    });
+
     // Restaurant Types
     Route::group(['prefix' => 'restaurant_types', 'namespace' => 'RestaurantTypes', 'as' => 'restaurant_types.'], function () {
         Route::get('/', 'RestaurantTypesController@index')->name('index');

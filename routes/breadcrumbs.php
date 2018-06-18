@@ -57,6 +57,23 @@ Breadcrumbs::register('admin.kitchens.edit', function($breadcrumbs)
     $breadcrumbs->push(Lang::get('admin.pages.kitchens.breadcrumbs.edit'));
 });
 
+// Events
+Breadcrumbs::register('admin.events.index', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.index');
+    $breadcrumbs->push(Lang::get('admin.pages.events.breadcrumbs.index'), route('admin.events.index'));
+});
+Breadcrumbs::register('admin.events.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.events.index');
+    $breadcrumbs->push(Lang::get('admin.pages.events.breadcrumbs.create'), route('admin.events.create'));
+});
+Breadcrumbs::register('admin.events.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.events.index');
+    $breadcrumbs->push(Lang::get('admin.pages.events.breadcrumbs.edit'));
+});
+
 // Restaurant Types
 Breadcrumbs::register('admin.restaurant_types.index', function($breadcrumbs)
 {

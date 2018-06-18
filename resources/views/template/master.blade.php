@@ -19,14 +19,17 @@
     </head>
 
     <body>
-    @include('template.header')
+        @include('template.header')
 
-    <main role="main">
-        @yield('main')
+        <main role="main">
+            @yield('main')
 
-        @include('template.footer')
-    </main>
+            @include('template.footer')
+        </main>
 
-
+        <script type="text/javascript" src="{{ URL::asset('js/jquery-3.2.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/jquery.suggest.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>

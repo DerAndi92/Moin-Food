@@ -7,11 +7,11 @@ body {
 }
 
 a {
-    color: #52a98b;
+    color: #4f7383;
     text-decoration: none;
 }
 a:hover,a:focus {
-    color: #5dc19f;
+    color: #648ea0;
     text-decoration: none;
 }
 
@@ -104,7 +104,7 @@ dl dd {
 }
 .panel-footer {
     border-top: none;
-    background-color: #159272;
+    background-color: #4f7383;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     color: #cecece;
@@ -155,7 +155,7 @@ aside#menu {
         order: 1;
     }
     aside#menu #logo img{
-        height: 70px;
+        max-width: 100%;
     }
     aside#menu #nav-toggle {
         display: none;
@@ -210,7 +210,7 @@ aside#menu {
     }
     aside#menu li.active a{
         background-color: #454244;
-        border-left-color: #159272;
+        border-left-color: #4f7383;
     }
     aside#menu .account {
         padding: 8px;
@@ -380,11 +380,11 @@ main {
     }
     .paginator ul .active > a,
     .paginator ul .active > span{
-        background: #159272;
+        background: #4f7383;
     }
     .paginator ul .active > a:hover,
     .paginator ul .active > span:hover{
-        background: #159272;
+        background: #4f7383;
     }
     .paginator ul .disabled > a,
     .paginator ul .disabled > span{
@@ -408,4 +408,9 @@ main {
 .row-no-padding > [class*="col-"]{
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.image-preview {
+    margin-top: 8px;
+    max-width: 200px;
 }

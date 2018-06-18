@@ -16,8 +16,7 @@ class DatabaseSeeder extends Seeder
             KitchensTableSeeder::class,
             PlacesTableSeeder::class,
             PropertiesTableSeeder::class,
-            RestaurantTypesTableSeeder::class,
-            RestaurantsTableSeeder::class
+            RestaurantTypesTableSeeder::class
         ]);
     }
 }
