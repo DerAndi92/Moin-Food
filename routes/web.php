@@ -11,6 +11,8 @@
 |
 */
 
+require_once base_path('routes/backend.php');
+
 Route::get('/', [
     'as' => 'home', 'uses' => 'HomeController@home'
 ]);
