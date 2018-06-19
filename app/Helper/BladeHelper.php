@@ -12,6 +12,10 @@ class BladeHelper
         return Request::is($path) ? ' class="active"' : false;
     }
 
+    public static function googleSlug($string) {
+
+    }
+
     public static function activeRouteSegment($segment, $value)
     {
         if(!is_array($value)) {

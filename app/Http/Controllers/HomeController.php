@@ -2,10 +2,12 @@
 
 namespace MoinFood\Http\Controllers;
 
+use Illuminate\Http\Request;
 use MoinFood\Models\Event;
 use MoinFood\Models\Kitchen;
 use MoinFood\Models\Place;
 use MoinFood\Models\Property;
+use MoinFood\Models\Restaurant;
 use MoinFood\Models\RestaurantType;
 
 class HomeController extends Controller
@@ -26,5 +28,21 @@ class HomeController extends Controller
             'events' => $events,
             'places' => $places,
         ]);
+    }
+
+    public function search(Request $request) {
+
+        $restaurants = Restaurant::all();
+
+        return $this->getJsonSuccess([
+            'restaurants' => view('elements.restaurants',  compact('restaurants'))->render()
+        ]);
+    }
+
+    public function restaurant(Request $request, $id) {
+
+        $restaurant = Restaurant::findOrFail($id);
+
+        return $this->getJsonSuccess(view('elements.restaurant_popup',  compact('restaurant'))->render());
     }
 }

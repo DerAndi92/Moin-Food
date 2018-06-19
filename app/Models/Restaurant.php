@@ -53,4 +53,8 @@ class Restaurant extends Model
     public function hasImage() {
         return $this->images()->count() > 0;
     }
+
+    public function getImage() {
+        return $this->images()->first();
+    }
 }

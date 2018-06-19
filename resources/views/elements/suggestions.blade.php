@@ -1,7 +1,7 @@
 <!-- Proposals -->
 <section id="restaurant-suggestions">
     <div class="container">
-        <h2 class="headline">Beliebte Anlässe</h2>
+        <h2 class="headline">Einfach schneller finden!</h2>
         <ul class="restaurant-cards is-small">
             <li class="restaurant-card">
                 <a href="/" class="wrapper">

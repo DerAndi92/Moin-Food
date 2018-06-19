@@ -16,3 +16,11 @@ require_once base_path('routes/backend.php');
 Route::get('/', [
     'as' => 'home', 'uses' => 'HomeController@home'
 ]);
+
+Route::get('/restaurant/{id}', [
+    'as' => 'restaurant', 'uses' => 'HomeController@restaurant'
+]);
+
+Route::post('/search', [
+    'as' => 'search', 'uses' => 'HomeController@search'
+]);

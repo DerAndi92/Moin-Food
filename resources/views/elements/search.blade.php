@@ -1,7 +1,8 @@
 <!-- Search -->
 <section id="search">
     <div class="container">
-        <form id="mf-search" class="search-form">
+        <form action="{{route('search')}}" method="POST"  id="mf-search" class="search-form">
+            {{ csrf_field() }}
             <div class="search-inner">
                 <div class="search-map-icon"></div>
 

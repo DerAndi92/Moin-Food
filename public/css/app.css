@@ -324,11 +324,16 @@ footer#mf-footer {
     transform: rotate(45deg);
 }
 
-/* --- Suggestions --- */
+/* --- Suggestions & Restaurant List --- */
 
-section#restaurant-suggestions {
+section#restaurant-suggestions,
+section#restaurant-list{
     margin-top: 30px;
     padding: 20px 0;
+}
+
+section#restaurant-list {
+    padding-bottom: 0;
 }
 
 .restaurant-cards {
@@ -458,10 +463,14 @@ section#restaurant-suggestions {
     z-index: 0;
 }
 .restaurant-cards:not(.is-small) h4 {
-    margin: 0 0 0.75rem;
+    margin: 0;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+}
+.restaurant-cards .body p {
+    margin: 6px 0 0;
+    font-size: 14px;
 }
 .restaurant-cards .distance {
     -webkit-box-align: center;
@@ -484,7 +493,7 @@ section#restaurant-suggestions {
     font-weight: 600;
 }
 .restaurant-cards:not(.is-small) .restaurant-card {
-    height: 450px;
+    height: 400px;
 }
 .restaurant-cards .meta {
     -webkit-box-flex: 1;
@@ -520,3 +529,113 @@ section#about-us p {
 }
 
 
+#popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+#popup .popup_wrap {
+    height: inherit;
+    widows: inherit;
+    position: relative;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+#popup .popup {
+    position: absolute;
+    max-height: 90%;
+    max-width: 850px;
+    min-width: 500px;
+    overflow: auto;
+    background-color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 11px 4px rgba(79, 115, 131, 0.09);
+    -moz-box-shadow: 0 0 11px 4px rgba(79, 115, 131, 0.09);
+    box-shadow: 0 0 11px 4px rgba(79, 115, 131, 0.09);
+}
+
+@media (max-width: 550px), (max-height: 550px) {
+    #popup .popup {
+        position: fixed;
+        max-height: 100%;
+        max-width: none;
+        min-width: 100%;
+        overflow: auto;
+        background-color: #333;
+        transform: translateY(-50%);
+        left: 0;
+        top: 50%;
+        box-shadow: none;
+    }
+}
+.popup_content {
+    display: flex;
+    flex-direction: row;
+}
+.popup_content .popup-img_bg {
+    width: 250px;
+    position: relative;
+}
+.popup_content .popup-img_bg img{
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+}
+.popup_content .popup-details{
+    width: 100%;
+    padding: 20px;
+}
+.popup_content h4 {
+    color: #de4319;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.75rem;
+}
+.popup_content p.description {
+    margin: 4px 0;
+}
+.popup_content .ratings {
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+    padding: 24px 0;
+    margin: 26px 0;
+}
+.popup_content .address {
+
+}
+#popup .popup > a.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 4px 9px;
+    display: block;
+    font-size: 15px;
+    color: #666;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 6px;
+}
+#popup .popup > a.popup_close:hover {
+    color: #fff;
+    background: #de4319;
+}
