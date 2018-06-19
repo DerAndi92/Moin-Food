@@ -9,9 +9,10 @@
 
         <!-- Fonts & CSS -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,800" rel="stylesheet">
-        <link rel="stylesheet" type= "text/css" href="css/reset.css">
-        <link rel="stylesheet" type= "text/css" href="css/basic.css">
-        <link rel="stylesheet" type= "text/css" href="css/app.css">
+        <link rel="stylesheet" type= "text/css" href="{{ URL::asset('css/reset.css') }}">
+        <link rel="stylesheet" type= "text/css" href="{{ URL::asset('css/basic.css') }}">
+        <link rel="stylesheet" type= "text/css" href="{{ URL::asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/backend/font-awesome.css') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">

@@ -1,7 +1,7 @@
 <!-- Search -->
 <section id="search">
     <div class="container">
-        <form class="search-form">
+        <form id="mf-search" class="search-form">
             <div class="search-inner">
                 <div class="search-map-icon"></div>
 
