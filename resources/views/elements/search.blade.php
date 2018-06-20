@@ -16,7 +16,7 @@
                         <div class="search-options">
                             <div class="mf-input-select">
                                 <select name="price_category">
-                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Preiskategorie</option>
+                                    <option class="icon-down-open" value="0" selected="true">Preiskategorie</option>
                                     <option class="icon-down-open" value="1">Preiswert</option>
                                     <option class="icon-down-open" value="2">Mittelmaß</option>
                                     <option class="icon-down-open" value="3">Gehoben</option>
@@ -24,7 +24,7 @@
                             </div>
                             <div class="mf-input-select">
                                 <select name="kitchen">
-                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Landesküche</option>
+                                    <option class="icon-down-open" value="0" selected="true">Landesküche</option>
                                     @foreach($kitchens as $kitchen)
                                         <option class="icon-down-open" value="{{$kitchen->id}}">{{$kitchen->name}}</option>
                                     @endforeach
@@ -32,7 +32,7 @@
                             </div>
                             <div class="mf-input-select">
                                 <select name="event">
-                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Anlass</option>
+                                    <option class="icon-down-open" value="0" selected="true">Anlass</option>
                                     @foreach($events as $event)
                                         <option class="icon-down-open" value="{{$event->id}}">{{$event->name}}</option>
                                     @endforeach
@@ -41,7 +41,7 @@
 
                             <div class="mf-input-select">
                                 <select name="restaurant_type">
-                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Ambiente</option>
+                                    <option class="icon-down-open" value="0" selected="true">Ambiente</option>
                                     @foreach($restaurantTypes as $restaurantType)
                                         <option class="icon-down-open" value="{{$restaurantType->id}}">{{$restaurantType->name}}</option>
                                     @endforeach
