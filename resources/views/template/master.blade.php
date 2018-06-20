@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <title>Moin-Food Hamburg</title>
+        <title>Moin! Food - Hamburg</title>
 
         <!-- Fonts & CSS -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,800" rel="stylesheet">
