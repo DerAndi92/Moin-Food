@@ -165,7 +165,7 @@ $(document).ready(function(){
     $('[data-popup]').popup();
 
     $("#search .locate-icon").on('click', function(event) {
-        $("#restaurant-search").val('Eilbek');
+        $("#restaurant-search").val('Barmbek-Süd');
     });
 
     $(".search-more-button").on('click', function(event) {
