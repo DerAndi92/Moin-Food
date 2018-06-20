@@ -1,7 +1,9 @@
 <div class="popup_content">
-    <div class="popup-img_bg">
-        <img src="{{asset('images/content/restaurants/' . $restaurant->getImage()->name) }}" />
-    </div>
+    @if($restaurant->getImage())
+        <div class="popup-img_bg">
+            <img src="{{asset('images/content/restaurants/' . $restaurant->getImage()->name) }}" />
+        </div>
+    @endif
     <div class="popup-details">
         <h4>{{$restaurant->name}}</h4>
         <p class="description">

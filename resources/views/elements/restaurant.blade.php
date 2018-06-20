@@ -1,6 +1,6 @@
 <li class="restaurant-card">
     <a rel="nofollow" data-popup="restaurant.get.{{$restaurant->id}}" href="{{route('restaurant', ['id' => $restaurant->id])}}" class="wrapper">
-        <img src="{{asset('images/content/restaurants/' . $restaurant->getImage()->name) }}" />
+        @if($restaurant->getImage())<img src="{{asset('images/content/restaurants/' . $restaurant->getImage()->name) }}" />@endif
         <div class="meta">
             <span class="distance">12 Shops</span>
         </div>
