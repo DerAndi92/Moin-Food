@@ -57,4 +57,21 @@ class Restaurant extends Model
     public function getImage() {
         return $this->images()->first();
     }
+
+    public function getRatingInWords($rating) {
+        switch($rating) {
+            case 3:
+                return 'Perfekt';
+                break;
+            case 2:
+                return 'Sehr Gut';
+                break;
+            case 1:
+                return 'Gut';
+                break;
+            default:
+                return 'Unbekannt';
+                break;
+        }
+    }
 }

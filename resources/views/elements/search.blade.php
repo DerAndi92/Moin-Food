@@ -14,6 +14,14 @@
                         </div>
                         <div class="search-options">
                             <div class="mf-input-select">
+                                <select name="price_category">
+                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Preiskategorie</option>
+                                    <option class="icon-down-open" value="1">Preiswert</option>
+                                    <option class="icon-down-open" value="2">Mittelmaß</option>
+                                    <option class="icon-down-open" value="3">Gehoben</option>
+                                </select>
+                            </div>
+                            <div class="mf-input-select">
                                 <select name="kitchen">
                                     <option class="icon-down-open" value="0" selected="true" disabled="disabled">Landesküche</option>
                                     @foreach($kitchens as $kitchen)
@@ -29,14 +37,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="mf-input-select">
-                                <select name="price_category">
-                                    <option class="icon-down-open" value="0" selected="true" disabled="disabled">Preiskategorie</option>
-                                    <option class="icon-down-open" value="1">Preiswert</option>
-                                    <option class="icon-down-open" value="2">Mittelmaß</option>
-                                    <option class="icon-down-open" value="3">Gehoben</option>
-                                </select>
-                             </div>
+
                             <div class="mf-input-select">
                                 <select name="restaurant_type">
                                     <option class="icon-down-open" value="0" selected="true" disabled="disabled">Ambiente</option>
