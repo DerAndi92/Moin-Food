@@ -76,7 +76,12 @@ class HomeController extends Controller
             });
         }
 
-
+        // Properties
+        if($properties) {
+            $restaurants = $restaurants->whereHas('properties', function ($query) use ($properties) {
+                    $query->select(\DB::raw('count(distinct id)'))->whereIn('id', array_values($properties));
+                }, '=', count($properties));
+        }
 
         $restaurants = $restaurants->get();
 
