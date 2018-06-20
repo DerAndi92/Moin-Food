@@ -189,7 +189,7 @@ footer#mf-footer {
     width: 100%;
     position: relative;
 }
-#search .search-input-place:after {
+#search .locate-icon {
     position: absolute;
     content: '';
     right: 8px;
@@ -203,6 +203,7 @@ footer#mf-footer {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     z-index: 11;
+    cursor: pointer;
 }
 #search .search-input-place input {
     -moz-appearance: none;

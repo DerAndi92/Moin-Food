@@ -32,7 +32,53 @@ class HomeController extends Controller
 
     public function search(Request $request) {
 
-        $restaurants = Restaurant::all();
+        $place = $request->get('place', false);
+        $price_category = $request->get('price_category', false);
+        $kitchen = $request->get('kitchen', false);
+        $event = $request->get('event', false);
+        $restaurant_type = $request->get('restaurant_type', false);
+        $properties = $request->get('properties', []);
+
+        // Place
+        if(is_numeric($place)) {
+            $restaurants = Restaurant::whereHas('place', function ($query) use ($place) {
+                $query->where('zip', '=', $place);
+            });
+        } else {
+            $restaurants = Restaurant::whereHas('place', function ($query) use ($place) {
+                $query->where('name', '=', $place);
+            });
+        }
+
+        // Price Category
+        if($price_category ) {
+            $restaurants = $restaurants->where('price_category', '=', $price_category);
+        }
+
+        // Restaurant Type
+        if($restaurant_type ) {
+            $restaurants = $restaurants->whereHas('restaurantType', function ($query) use ($restaurant_type) {
+                $query->where('id', '=', $restaurant_type);
+            });
+        }
+
+        // Kitchen
+        if($kitchen) {
+            $restaurants = $restaurants->whereHas('kitchens', function ($query) use ($kitchen) {
+                $query->where('id', '=', $kitchen);
+            });
+        }
+
+        // Event
+        if($event) {
+            $restaurants = $restaurants->whereHas('events', function ($query) use ($event) {
+                $query->where('id', '=', $event);
+            });
+        }
+
+
+
+        $restaurants = $restaurants->get();
 
         return $this->getJsonSuccess([
             'restaurants' => view('elements.restaurants',  compact('restaurants'))->render()

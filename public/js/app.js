@@ -164,6 +164,10 @@ $(document).ready(function(){
 
     $('[data-popup]').popup();
 
+    $("#search .locate-icon").on('click', function(event) {
+        $("#restaurant-search").val('Eilbek');
+    });
+
     $(".search-more-button").on('click', function(event) {
         event.preventDefault();
         $(".search-extend").slideToggle();
