@@ -21,10 +21,10 @@
                         @case(1)
                             Preiswert
                             @break
-                        @case(1)
+                        @case(2)
                             Mittelmaß
                             @break
-                        @case(1)
+                        @case(3)
                             Gehoben
                             @break
                     @endswitch

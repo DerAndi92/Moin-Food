@@ -7,7 +7,7 @@
         <div class="body">
             <h4>{{$restaurant->name}}</h4>
             <p>
-                {{ str_limit($restaurant->description, 75, '...') }}
+                {{ str_limit($restaurant->description, 70, '...') }}
             </p>
         </div>
     </a>

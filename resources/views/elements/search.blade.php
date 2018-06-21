@@ -10,7 +10,7 @@
                 <div class="search-form-wrapper">
                     <div class="search-form-fields">
                         <div class="search-input-place">
-                            <input id="restaurant-search" type="text" name="place" class="input" tabindex="1" placeholder="Wo möchtest du suchen?" required/>
+                            <input id="restaurant-search" type="text" name="place" class="input" tabindex="1" placeholder="In welchem Stadtteil möchtest du suchen?" required/>
                             <span class="locate-icon"></span>
                         </div>
                         <div class="search-options">
